@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        query = FirebaseDatabase.getInstance().getReference().child("hot coffee");
+        query = FirebaseDatabase.getInstance().getReference().child("Hot Coffees");
 
         FirebaseRecyclerOptions<Coffee> options = new FirebaseRecyclerOptions.Builder<Coffee>()
                 .setQuery(query, Coffee.class)
