@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Anneta/AndroidStudioProjects/IndividualProject/app/src/main/res/layout/activity_main.xml" value="0.12360688956433637" />
-        <entry key="..\:/Users/Anneta/AndroidStudioProjects/IndividualProject/app/src/main/res/layout/row_layout.xml" value="0.6" />
+        <entry key="..\:/Users/Anneta/AndroidStudioProjects/IndividualProject/app/src/main/res/layout/activity_main.xml" value="0.35311143270622286" />
+        <entry key="..\:/Users/Anneta/AndroidStudioProjects/IndividualProject/app/src/main/res/layout/activity_product.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Anneta/AndroidStudioProjects/IndividualProject/app/src/main/res/layout/row_layout.xml" value="0.2" />
         <entry key="..\:/Users/awamono7170/StudioProjects/CoffeeDeliveryAndroidApp/app/src/main/res/layout/activity_main.xml" value="0.16590678824721378" />
         <entry key="..\:/Users/awamono7170/StudioProjects/CoffeeDeliveryAndroidApp/app/src/main/res/layout/row_layout.xml" value="0.16590678824721378" />
       </map>

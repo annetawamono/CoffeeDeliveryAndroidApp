@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">IndividualProject</string>
+    <string name="cupSize_small">S</string>
+    <string name="cupSize_medium">M</string>
+    <string name="cupSize_large">L</string>
 </resources>

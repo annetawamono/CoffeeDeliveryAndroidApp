@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         rView = findViewById(R.id.rView);
         rView.setAdapter(adapter);
-        rView.setLayoutManager(new GridLayoutManager(this, 2));
+        rView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     @Override
