@@ -35,7 +35,10 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="8dp"
-                app:cardBackgroundColor="@color/primaryLightColor">
+                app:cardBackgroundColor="@color/primaryLightColor"
+                app:contentPaddingLeft="8dp"
+                app:contentPaddingRight="8dp"
+                app:contentPaddingTop="11dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -85,24 +88,26 @@
                         android:text="What cup size?" />
 
                     <RadioGroup
+                        android:id="@+id/rGrpSize"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/rBtnSmall"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/cupSize_small" />
 
                         <RadioButton
                             android:id="@+id/rBtnMedium"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/cupSize_medium" />
 
                         <RadioButton
                             android:id="@+id/rBtnLarge"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/cupSize_large" />
                     </RadioGroup>
