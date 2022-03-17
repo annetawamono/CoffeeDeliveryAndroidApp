@@ -14,7 +14,6 @@ public class CheckoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
 
-        // TODO: Get extras and put it int txtOrders
         txtOrder = findViewById(R.id.txtOrder);
 
         Intent myCheckoutIntent = getIntent();
@@ -33,5 +32,9 @@ public class CheckoutActivity extends AppCompatActivity {
 //        sb.append(myCheckoutIntent.getStringExtra("SIZE"));
 
         txtOrder.setText(sb.toString());
+
+        /* Move to Delivery page */
+        Intent myDeliveryIntent = new Intent(this, DeliveryActivity.class);
+        startActivity(myDeliveryIntent);
     }
 }
