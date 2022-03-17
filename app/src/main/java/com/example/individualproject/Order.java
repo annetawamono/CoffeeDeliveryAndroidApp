@@ -49,8 +49,18 @@ public class Order {
     private String flavour;
 
     public enum Size {
-        SMALL,
-        MEDIUM,
-        LARGE
+        SMALL("Small"),
+        MEDIUM("Medium"),
+        LARGE("Large");
+
+        private String stringValue;
+        private Size(String s) {
+            stringValue = s;
+        }
+
+        @Override
+        public String toString() {
+            return stringValue;
+        }
     }
 }

@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.firebase.storage.FirebaseStorage;
@@ -64,15 +65,19 @@ public class ProductActivity extends AppCompatActivity {
             radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(RadioGroup radioGroup, int checkedBtnId) {
+                    Toast.makeText(ProductActivity.this, "Clicked", Toast.LENGTH_SHORT).show();
                     switch (checkedBtnId) {
                         case R.id.rBtnSmall:
                             myOrder.setSize(Order.Size.SMALL);
+                            Toast.makeText(ProductActivity.this, "Small clicked", Toast.LENGTH_SHORT).show();
                             break;
                         case R.id.rBtnMedium:
                             myOrder.setSize(Order.Size.MEDIUM);
+                            Toast.makeText(ProductActivity.this, "Medium clicked", Toast.LENGTH_SHORT).show();
                             break;
                         case R.id.rBtnLarge:
                             myOrder.setSize(Order.Size.LARGE);
+                            Toast.makeText(ProductActivity.this, "Large clicked", Toast.LENGTH_SHORT).show();
                             break;
                     }
                 }
@@ -80,9 +85,10 @@ public class ProductActivity extends AppCompatActivity {
 
             /* Go to checkout page and pass order details */
             Intent myCheckoutIntent = new Intent(this, CheckoutActivity.class);
+            myCheckoutIntent.putExtra("NAME", name);
             myCheckoutIntent.putExtra("QTY", myOrder.getQty());
             myCheckoutIntent.putExtra("SHOTS", myOrder.getShots());
-            myCheckoutIntent.putExtra("SIZE", myOrder.getSize());
+//            myCheckoutIntent.putExtra("SIZE", myOrder.getSize().toString());
 
             startActivity(myCheckoutIntent);
         });
