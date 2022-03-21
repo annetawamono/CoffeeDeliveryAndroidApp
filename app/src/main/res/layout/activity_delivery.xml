@@ -21,24 +21,40 @@
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Delivery" />
+            android:layout_marginBottom="7sp"
+            android:fontFamily="@font/roboto_medium"
+            android:lineSpacingExtra="16sp"
+            android:text="Delivery"
+            android:textAllCaps="true"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="10sp" />
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Your Order is on the way!" />
+            android:layout_marginBottom="7sp"
+            android:fontFamily="@font/roboto_medium"
+            android:lineSpacingExtra="24sp"
+            android:text="Your Order is on the way!"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sit tight while your driver delivers your coffee." />
+            android:alpha="0.6"
+            android:fontFamily="@font/roboto_regular"
+            android:lineSpacingExtra="20sp"
+            android:text="Sit tight while your driver delivers your coffee."
+            android:textColor="@color/primaryTextColor" />
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/animationView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="349dp"
+            android:scaleType="fitCenter"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
             app:lottie_url="https://assets9.lottiefiles.com/packages/lf20_ah1zbzo1.json" />
@@ -47,6 +63,10 @@
             android:id="@+id/txtCountdown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:fontFamily="@font/roboto_medium"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="48sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

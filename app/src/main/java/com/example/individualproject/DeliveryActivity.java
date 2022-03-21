@@ -1,8 +1,10 @@
 package com.example.individualproject;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.TextView;
@@ -34,13 +36,25 @@ public class DeliveryActivity extends AppCompatActivity {
                 updateCountdownText(l);
             }
 
+            @RequiresApi(api = Build.VERSION_CODES.R)
             @Override
             public void onFinish() {
-                // TODO: Add callback to Toast and then go to Main page
-//                Intent myMainIntent = new Intent(DeliveryActivity.this, MainActivity.class);
-                Toast mToast = Toast.makeText(DeliveryActivity.this, "Your delivery has arrived", Toast.LENGTH_LONG);
+
+                Intent myMainIntent = new Intent(DeliveryActivity.this, MainActivity.class);
+                startActivity(myMainIntent);
+
+//                updateCountdownText(0);
+//                Toast mToast = Toast.makeText(DeliveryActivity.this, "Your delivery has arrived", Toast.LENGTH_LONG);
 //                mToast.show();
-//                mToast.addCallback(Toast.Callback);
+//                mToast.addCallback(new Toast.Callback() {
+//                    /* Calls the MainActivity page when the Toast message has been dismissed*/
+//                    @Override
+//                    public void onToastHidden() {
+//                        super.onToastHidden();
+//                        Intent myMainIntent = new Intent(DeliveryActivity.this, MainActivity.class);
+//                        startActivity(myMainIntent);
+//                    }
+//                });
             }
         }.start();
     }

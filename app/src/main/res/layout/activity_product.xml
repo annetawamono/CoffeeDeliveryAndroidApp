@@ -49,43 +49,68 @@
                         android:id="@+id/textView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Make Your Order" />
+                        android:layout_marginBottom="7sp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:lineSpacingExtra="16sp"
+                        android:text="Make Your Order"
+                        android:textAllCaps="true"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="10sp" />
 
                     <TextView
                         android:id="@+id/txtCoffeeName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:layout_marginBottom="7sp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:lineSpacingExtra="24sp"
+                        android:text="TextView"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/txtCoffeeDescription"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:alpha="0.6"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="TextView"
+                        android:textColor="@color/primaryTextColor" />
 
                     <EditText
                         android:id="@+id/editQty"
+                        style="@style/Widget.AppCompat.EditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="16sp"
                         android:ems="10"
+                        android:fontFamily="@font/roboto_regular"
                         android:hint="Qty"
                         android:inputType="number"
-                        android:minHeight="48dp" />
+                        android:minHeight="48dp"
+                        android:textColor="@color/primaryTextColor" />
 
                     <EditText
                         android:id="@+id/editShots"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="16sp"
                         android:ems="10"
+                        android:fontFamily="@font/roboto_regular"
                         android:hint="Shots"
                         android:inputType="number"
-                        android:minHeight="48dp" />
+                        android:minHeight="48dp"
+                        android:textColor="@color/primaryTextColor" />
 
                     <TextView
                         android:id="@+id/textView4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="What cup size?" />
+                        android:fontFamily="@font/roboto_regular"
+                        android:lineSpacingExtra="20sp"
+                        android:text="What cup size?"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="16sp" />
 
                     <RadioGroup
                         android:id="@+id/rGrpSize"
@@ -97,19 +122,28 @@
                             android:id="@+id/rBtnSmall"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/cupSize_small" />
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="@string/cupSize_small"
+                            android:textColor="@color/primaryTextColor"
+                            android:textSize="16sp" />
 
                         <RadioButton
                             android:id="@+id/rBtnMedium"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/cupSize_medium" />
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="@string/cupSize_medium"
+                            android:textColor="@color/primaryTextColor"
+                            android:textSize="16sp" />
 
                         <RadioButton
                             android:id="@+id/rBtnLarge"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/cupSize_large" />
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="@string/cupSize_large"
+                            android:textColor="@color/primaryTextColor"
+                            android:textSize="16sp" />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -121,6 +155,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="8dp"
+                android:fontFamily="@font/roboto_medium"
                 android:text="Checkout" />
 
         </LinearLayout>

@@ -57,7 +57,6 @@ public class ProductActivity extends AppCompatActivity {
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedBtnId) {
-                Toast.makeText(ProductActivity.this, "Clicked", Toast.LENGTH_SHORT).show();
                 switch (checkedBtnId) {
                     case R.id.rBtnSmall:
                         myOrder.setSize(Order.Size.SMALL);
@@ -71,6 +70,8 @@ public class ProductActivity extends AppCompatActivity {
                 }
             }
         });
+
+        // TODO: Set defaults for qty and shots
 
         editQty = findViewById(R.id.editQty);
         editShots = findViewById(R.id.editShots);
