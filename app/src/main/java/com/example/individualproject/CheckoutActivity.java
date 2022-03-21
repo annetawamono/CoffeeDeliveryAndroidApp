@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class CheckoutActivity extends AppCompatActivity {
     TextView txtOrder;
+    Button btnPay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +17,7 @@ public class CheckoutActivity extends AppCompatActivity {
         setContentView(R.layout.activity_checkout);
 
         txtOrder = findViewById(R.id.txtOrder);
+        btnPay = findViewById(R.id.btnPaynow);
 
         Intent myCheckoutIntent = getIntent();
 
@@ -34,7 +37,11 @@ public class CheckoutActivity extends AppCompatActivity {
         txtOrder.setText(sb.toString());
 
         /* Move to Delivery page */
-        Intent myDeliveryIntent = new Intent(this, DeliveryActivity.class);
-        startActivity(myDeliveryIntent);
+
+        btnPay.setOnClickListener(view -> {
+            Intent myDeliveryIntent = new Intent(this, DeliveryActivity.class);
+            startActivity(myDeliveryIntent);
+        });
+
     }
 }

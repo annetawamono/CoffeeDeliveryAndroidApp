@@ -48,47 +48,47 @@ public class ProductActivity extends AppCompatActivity {
         StorageReference storageReference = FirebaseStorage.getInstance().getReferenceFromUrl(image);
         Glide.with(this).load(storageReference).into(imageView);
 
+        myOrder = new Order();
+
+        /* Set default size */
+        myOrder.setSize(Order.Size.SMALL);
+
+        radioGroup = findViewById(R.id.rGrpSize);
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int checkedBtnId) {
+                Toast.makeText(ProductActivity.this, "Clicked", Toast.LENGTH_SHORT).show();
+                switch (checkedBtnId) {
+                    case R.id.rBtnSmall:
+                        myOrder.setSize(Order.Size.SMALL);
+                        break;
+                    case R.id.rBtnMedium:
+                        myOrder.setSize(Order.Size.MEDIUM);
+                        break;
+                    case R.id.rBtnLarge:
+                        myOrder.setSize(Order.Size.LARGE);
+                        break;
+                }
+            }
+        });
+
+        editQty = findViewById(R.id.editQty);
+        editShots = findViewById(R.id.editShots);
+
         /* Pass user input into an Order object */
         btnCheckout.setOnClickListener(view -> {
-            myOrder = new Order();
-
-            editQty = findViewById(R.id.editQty);
-            editShots = findViewById(R.id.editShots);
-
             int qty = Integer.parseInt(editQty.getText().toString());
             myOrder.setQty(qty);
 
             int shots = Integer.parseInt(editShots.getText().toString());
             myOrder.setShots(shots);
 
-            radioGroup = findViewById(R.id.rGrpSize);
-            radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(RadioGroup radioGroup, int checkedBtnId) {
-                    Toast.makeText(ProductActivity.this, "Clicked", Toast.LENGTH_SHORT).show();
-                    switch (checkedBtnId) {
-                        case R.id.rBtnSmall:
-                            myOrder.setSize(Order.Size.SMALL);
-                            Toast.makeText(ProductActivity.this, "Small clicked", Toast.LENGTH_SHORT).show();
-                            break;
-                        case R.id.rBtnMedium:
-                            myOrder.setSize(Order.Size.MEDIUM);
-                            Toast.makeText(ProductActivity.this, "Medium clicked", Toast.LENGTH_SHORT).show();
-                            break;
-                        case R.id.rBtnLarge:
-                            myOrder.setSize(Order.Size.LARGE);
-                            Toast.makeText(ProductActivity.this, "Large clicked", Toast.LENGTH_SHORT).show();
-                            break;
-                    }
-                }
-            });
-
             /* Go to checkout page and pass order details */
             Intent myCheckoutIntent = new Intent(this, CheckoutActivity.class);
             myCheckoutIntent.putExtra("NAME", name);
             myCheckoutIntent.putExtra("QTY", myOrder.getQty());
             myCheckoutIntent.putExtra("SHOTS", myOrder.getShots());
-//            myCheckoutIntent.putExtra("SIZE", myOrder.getSize().toString());
+            myCheckoutIntent.putExtra("SIZE", myOrder.getSize().toString());
 
             startActivity(myCheckoutIntent);
         });

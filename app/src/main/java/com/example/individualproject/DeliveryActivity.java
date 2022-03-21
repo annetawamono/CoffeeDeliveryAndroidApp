@@ -39,8 +39,8 @@ public class DeliveryActivity extends AppCompatActivity {
                 // TODO: Add callback to Toast and then go to Main page
 //                Intent myMainIntent = new Intent(DeliveryActivity.this, MainActivity.class);
                 Toast mToast = Toast.makeText(DeliveryActivity.this, "Your delivery has arrived", Toast.LENGTH_LONG);
-                mToast.show();
-//                mToast.addCallback();
+//                mToast.show();
+//                mToast.addCallback(Toast.Callback);
             }
         }.start();
     }
