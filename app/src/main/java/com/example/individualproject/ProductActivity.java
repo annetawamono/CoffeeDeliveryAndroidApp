@@ -50,8 +50,10 @@ public class ProductActivity extends AppCompatActivity {
 
         myOrder = new Order();
 
-        /* Set default size */
+        /* Set default order */
         myOrder.setSize(Order.Size.SMALL);
+        myOrder.setQty(1);
+        myOrder.setShots(1);
 
         radioGroup = findViewById(R.id.rGrpSize);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -70,8 +72,6 @@ public class ProductActivity extends AppCompatActivity {
                 }
             }
         });
-
-        // TODO: Set defaults for qty and shots
 
         editQty = findViewById(R.id.editQty);
         editShots = findViewById(R.id.editShots);

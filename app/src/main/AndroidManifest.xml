@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IndividualProject">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".DeliveryActivity"
             android:exported="false" />
         <activity
@@ -19,7 +22,7 @@
             android:name=".ProductActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".IntroActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
